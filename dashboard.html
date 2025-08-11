@@ -662,34 +662,12 @@
             color: var(--primary);
             margin-bottom: 0.6rem;
             font-size: 1.05rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .term-item p {
             color: var(--gray);
             font-size: 0.95rem;
             line-height: 1.6;
-        }
-
-        .chat-icon {
-            background: var(--primary);
-            color: white;
-            border: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .chat-icon:hover {
-            background: var(--primary-light);
-            transform: scale(1.1);
         }
 
         .footer {
@@ -898,187 +876,6 @@
         .send-btn:hover {
             background: var(--primary-light);
             transform: translateY(-2px);
-        }
-
-        /* Chatbot Modal */
-        .chatbot-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .chatbot-container {
-            background: white;
-            border-radius: var(--border-radius);
-            width: 90%;
-            max-width: 500px;
-            max-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            box-shadow: var(--box-shadow);
-        }
-
-        .chatbot-header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: white;
-            padding: 1.2rem;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .chatbot-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .chatbot-title i {
-            color: var(--sense-color);
-        }
-
-        .close-chatbot {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .chatbot-body {
-            flex: 1;
-            padding: 1.5rem;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .chat-message {
-            max-width: 85%;
-            padding: 0.8rem 1.2rem;
-            border-radius: 18px;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .user-message {
-            background: #e3f2fd;
-            align-self: flex-end;
-            border-bottom-right-radius: 5px;
-        }
-
-        .bot-message {
-            background: #f1f8e9;
-            align-self: flex-start;
-            border-bottom-left-radius: 5px;
-            position: relative;
-        }
-
-        .bot-message::before {
-            content: "";
-            position: absolute;
-            left: -10px;
-            top: 15px;
-            border-width: 5px 10px 5px 0;
-            border-style: solid;
-            border-color: transparent #f1f8e9 transparent transparent;
-        }
-
-        .chatbot-footer {
-            padding: 1rem;
-            border-top: 1px solid #eee;
-        }
-
-        .chatbot-input {
-            display: flex;
-            gap: 10px;
-        }
-
-        .chatbot-input input {
-            flex: 1;
-            padding: 0.8rem 1.2rem;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-            font-size: 1rem;
-        }
-
-        .chatbot-input button {
-            background: var(--primary);
-            color: white;
-            border: none;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .suggested-questions {
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .suggested-question {
-            padding: 0.6rem;
-            background: #f5f5f5;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.9rem;
-        }
-
-        .suggested-question:hover {
-            background: #e0e0e0;
-        }
-
-        .search-source {
-            font-size: 0.8rem;
-            color: var(--gray);
-            margin-top: 8px;
-            font-style: italic;
-        }
-
-        .typing-indicator {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .typing-indicator span {
-            width: 8px;
-            height: 8px;
-            background: #888;
-            border-radius: 50%;
-            display: inline-block;
-            animation: typing 1.4s infinite ease-in-out;
-        }
-
-        .typing-indicator span:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .typing-indicator span:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        @keyframes typing {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-5px); }
         }
 
         @media (max-width: 992px) {
@@ -1567,24 +1364,24 @@
 
             <!-- Medical Term Explanations -->
             <div class="explanation-panel">
-                <h3><i class="fas fa-info-circle"></i> Medical Term Explanations <button class="chat-icon" id="open-all-chatbot"><i class="fas fa-robot"></i></button></h3>
-                <p style="margin-bottom: 1rem; color: var(--gray);">Click the chat icons to ask questions about each term</p>
+                <h3><i class="fas fa-info-circle"></i> Medical Term Explanations</h3>
+                <p style="margin-bottom: 1rem; color: var(--gray);">Key terms for better understanding your safety metrics</p>
                 <div class="term-list">
                     <div class="term-item">
-                        <h4>TUG Test (Timed Up and Go) <button class="chat-icon" data-term="TUG Test"><i class="fas fa-comment-medical"></i></button></h4>
+                        <h4>TUG Test (Timed Up and Go)</h4>
                         <p>A mobility test that measures the time it takes to stand up from a chair, walk 3 meters, turn around, walk back, and sit down. Used to assess fall risk.</p>
                     </div>
                     <div class="term-item">
-                        <h4>Fall Risk Score <button class="chat-icon" data-term="Fall Risk Score"><i class="fas fa-comment-medical"></i></button></h4>
+                        <h4>Fall Risk Score</h4>
                         <p>A calculated score (0-10) based on multiple factors including gait, balance, medication use, and history. Higher scores indicate greater fall risk.</p>
                     </div>
                     <div class="term-item">
-                        <h4>Gait Analysis <button class="chat-icon" data-term="Gait Analysis"><i class="fas fa-comment-medical"></i></button></h4>
+                        <h4>Gait Analysis</h4>
                         <p>The systematic study of human walking patterns, including metrics like stride length, walking speed, and cadence to assess mobility and fall risk.</p>
                     </div>
                     <div class="term-item">
-                        <h4>Restlessness Events <button class="chat-icon" data-term="Restlessness Events"><i class="fas fa-comment-medical"></i></button></h4>
-                        <p>Significant movements during sleep detected by sensors. Higher counts may indicate poor sleep quality or underlying health issues.</p>
+                        <h4>Restlessness Events</h4>
+                        <p>Significant body movements during sleep detected by sensors. Higher counts may indicate poor sleep quality or underlying health issues.</p>
                     </div>
                 </div>
             </div>
@@ -1593,30 +1390,6 @@
         <div class="footer">
             <p>sense4safety Dashboard | Data Updated: June 20, 2025 | Monitoring Period: Jan 2024 - Jun 2025</p>
             <p>Data Quality: 98.7% uptime | Sensor Calibration: Monthly | Baseline Period: First 3 months of 2024</p>
-        </div>
-    </div>
-
-    <!-- Chatbot Modal -->
-    <div class="chatbot-modal" id="chatbot-modal">
-        <div class="chatbot-container">
-            <div class="chatbot-header">
-                <div class="chatbot-title"><i class="fas fa-robot"></i> sense4safety AI Assistant</div>
-                <button class="close-chatbot" id="close-chatbot">&times;</button>
-            </div>
-            <div class="chatbot-body" id="chat-messages">
-                <div class="chat-message bot-message">
-                    Hello! I'm your sense4safety AI assistant. I can help you understand medical terms and safety concepts. Ask me anything!
-                </div>
-                <div class="suggested-questions" id="suggested-questions">
-                    <!-- Suggested questions will be added here by JavaScript -->
-                </div>
-            </div>
-            <div class="chatbot-footer">
-                <div class="chatbot-input">
-                    <input type="text" id="user-input" placeholder="Ask a question about medical terms...">
-                    <button id="send-message"><i class="fas fa-paper-plane"></i></button>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -2103,9 +1876,6 @@
                 tab.addEventListener('click', function() {
                     commsTabs.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
-
-                    // In a real app, you would fetch messages for the selected type
-                    console.log(`Switched to ${this.dataset.tab} tab`);
                 });
             });
 
@@ -2120,9 +1890,6 @@
                     return;
                 }
 
-                // In a real app, this would send the message to the server
-                console.log(`Sending ${messageType} to ${recipient}: ${message}`);
-
                 // Show success message
                 alert(`Message to ${recipient} sent successfully!`);
 
@@ -2134,254 +1901,6 @@
             document.getElementById('comms-icon').addEventListener('click', function() {
                 showTab('communication');
             });
-        });
-
-        // Chatbot functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const chatbotModal = document.getElementById('chatbot-modal');
-            const closeChatbot = document.getElementById('close-chatbot');
-            const chatMessages = document.getElementById('chat-messages');
-            const userInput = document.getElementById('user-input');
-            const sendMessageBtn = document.getElementById('send-message');
-            const suggestedQuestions = document.getElementById('suggested-questions');
-            const chatIcons = document.querySelectorAll('.chat-icon[data-term]');
-            const openAllChatbot = document.getElementById('open-all-chatbot');
-
-            let currentTerm = '';
-            let isTyping = false;
-
-            // Predefined questions and answers
-            const termQuestions = {
-                'TUG Test': {
-                    questions: [
-                        "What does TUG stand for?",
-                        "How is the TUG test performed?",
-                        "What is a normal TUG test result?",
-                        "Why is the TUG test important for safety?",
-                        "Can the TUG test predict fall risk?",
-                        "How often should the TUG test be performed?",
-                        "What factors affect TUG test results?",
-                        "How can I improve my TUG test score?"
-                    ]
-                },
-                'Fall Risk Score': {
-                    questions: [
-                        "How is the fall risk score calculated?",
-                        "What factors contribute to the fall risk score?",
-                        "What does a score of 6.2 mean?",
-                        "How can I improve my fall risk score?",
-                        "What interventions reduce fall risk?",
-                        "How often is fall risk assessed?",
-                        "Can medications affect fall risk?",
-                        "What environmental factors increase fall risk?"
-                    ]
-                },
-                'Gait Analysis': {
-                    questions: [
-                        "What is gait analysis?",
-                        "What does gait analysis measure?",
-                        "How does gait analysis help with safety?",
-                        "Can I improve my gait?",
-                        "What technologies are used in gait analysis?",
-                        "How accurate is gait analysis?",
-                        "What are common gait abnormalities?",
-                        "Can gait analysis detect neurological issues?"
-                    ]
-                },
-                'Restlessness Events': {
-                    questions: [
-                        "What are restlessness events?",
-                        "What causes restlessness during sleep?",
-                        "Are restlessness events dangerous?",
-                        "How can I reduce restlessness during sleep?",
-                        "How are restlessness events measured?",
-                        "What is the connection between restlessness and health?",
-                        "Can medications cause restlessness?",
-                        "How does age affect sleep restlessness?"
-                    ]
-                }
-            };
-
-            // Open chatbot for a specific term
-            chatIcons.forEach(icon => {
-                icon.addEventListener('click', function() {
-                    currentTerm = this.getAttribute('data-term');
-                    openChatbot(currentTerm);
-                });
-            });
-
-            // Open general chatbot
-            openAllChatbot.addEventListener('click', function() {
-                currentTerm = '';
-                openChatbot();
-            });
-
-            // Open chatbot
-            function openChatbot(term = '') {
-                chatbotModal.style.display = 'flex';
-                chatMessages.innerHTML = `
-                    <div class="chat-message bot-message">
-                        Hello! I'm your sense4safety AI assistant.
-                        ${term ? `I can help you understand "${term}". What would you like to know?` : 'How can I assist you today?'}
-                    </div>
-                `;
-
-                // Clear suggested questions
-                suggestedQuestions.innerHTML = '';
-
-                if (term && termQuestions[term]) {
-                    // Add suggested questions for this term
-                    const questionsContainer = document.createElement('div');
-                    questionsContainer.className = 'suggested-questions';
-
-                    termQuestions[term].questions.forEach(question => {
-                        const questionEl = document.createElement('div');
-                        questionEl.className = 'suggested-question';
-                        questionEl.textContent = question;
-                        questionEl.addEventListener('click', function() {
-                            askQuestion(question, term);
-                        });
-                        questionsContainer.appendChild(questionEl);
-                    });
-
-                    chatMessages.appendChild(questionsContainer);
-                } else {
-                    // Add general questions if no specific term
-                    const questionsContainer = document.createElement('div');
-                    questionsContainer.className = 'suggested-questions';
-
-                    const generalQuestions = [
-                        "What is sense4safety?",
-                        "How does sense4safety monitor fall risk?",
-                        "Can sense4safety alert someone if I fall?",
-                        "What safety features does sense4safety offer?",
-                        "How accurate are the sensors?",
-                        "Can family members access my data?",
-                        "How does sense4safety protect my privacy?",
-                        "What health metrics does sense4safety track?"
-                    ];
-
-                    generalQuestions.forEach(question => {
-                        const questionEl = document.createElement('div');
-                        questionEl.className = 'suggested-question';
-                        questionEl.textContent = question;
-                        questionEl.addEventListener('click', function() {
-                            askQuestion(question);
-                        });
-                        questionsContainer.appendChild(questionEl);
-                    });
-
-                    chatMessages.appendChild(questionsContainer);
-                }
-
-                // Scroll to bottom
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-
-            // Close chatbot
-            closeChatbot.addEventListener('click', function() {
-                chatbotModal.style.display = 'none';
-                userInput.value = '';
-                isTyping = false;
-            });
-
-            // Send message when Enter is pressed
-            userInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' && !isTyping) {
-                    sendUserMessage();
-                }
-            });
-
-            // Send message when button is clicked
-            sendMessageBtn.addEventListener('click', sendUserMessage);
-
-            function sendUserMessage() {
-                const message = userInput.value.trim();
-                if (message === '' || isTyping) return;
-
-                // Add user message to chat
-                addMessage(message, 'user');
-                userInput.value = '';
-
-                // Get bot response
-                getBotResponse(message, currentTerm);
-            }
-
-            function askQuestion(question, term = currentTerm) {
-                // Add user question to chat
-                addMessage(question, 'user');
-
-                // Get bot response
-                getBotResponse(question, term);
-            }
-
-            function addMessage(message, sender) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = `chat-message ${sender}-message`;
-                messageDiv.textContent = message;
-                chatMessages.appendChild(messageDiv);
-
-                // Scroll to bottom
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-
-            function getBotResponse(question, term = currentTerm) {
-                isTyping = true;
-
-                // Show typing indicator
-                const typingIndicator = document.createElement('div');
-                typingIndicator.className = 'chat-message bot-message';
-                typingIndicator.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
-                chatMessages.appendChild(typingIndicator);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-
-                // Simulate web search delay
-                setTimeout(() => {
-                    // Remove typing indicator
-                    typingIndicator.remove();
-
-                    let response = "";
-                    let source = "Medical Safety Journal";
-
-                    // Generate a realistic response
-                    if (question.toLowerCase().includes("tug")) {
-                        response = "The Timed Up and Go (TUG) test is a simple clinical test used to assess mobility and fall risk in older adults and individuals with balance impairments. It measures the time taken to stand up from a chair, walk 3 meters, turn around, walk back, and sit down. A time of less than 10 seconds is considered normal for healthy elderly, while times over 14 seconds indicate a high risk of falls. The TUG test is widely used in clinical settings due to its simplicity and reliability.";
-                    }
-                    else if (question.toLowerCase().includes("fall risk")) {
-                        response = "Fall risk scores are calculated using multifactorial assessments that evaluate intrinsic and extrinsic factors. Common assessment tools include the Morse Fall Scale and Hendrich II Fall Risk Model. Scores typically consider factors like history of falls, gait instability, use of assistive devices, medications affecting balance, cognitive impairment, and environmental hazards. A score of 6.2 suggests moderate fall risk, indicating the need for preventive interventions such as strength training, home modifications, and medication review.";
-                        source = "National Institute on Aging";
-                    }
-                    else if (question.toLowerCase().includes("gait analysis")) {
-                        response = "Gait analysis involves the systematic study of human walking patterns using observational or instrumented methods. Modern systems utilize motion capture cameras, force plates, and wearable sensors to measure parameters like stride length, cadence, step width, and joint angles. This analysis helps identify abnormalities that may indicate neurological disorders, musculoskeletal problems, or balance issues. In safety monitoring, gait analysis can detect early signs of mobility decline, allowing for timely interventions to prevent falls.";
-                        source = "Journal of Biomechanics";
-                    }
-                    else if (question.toLowerCase().includes("restlessness")) {
-                        response = "Restlessness during sleep refers to excessive movements or frequent position changes that disrupt normal sleep architecture. It can be measured using actigraphy or polysomnography. Common causes include periodic limb movement disorder, restless legs syndrome, sleep apnea, pain, stress, or medication side effects. Chronic restlessness may lead to sleep fragmentation, daytime fatigue, and increased fall risk. Management strategies include treating underlying conditions, improving sleep hygiene, and in some cases, medication.";
-                        source = "Sleep Medicine Reviews";
-                    }
-                    else if (question.toLowerCase().includes("sense4safety")) {
-                        response = "sense4safety is an advanced safety monitoring system designed to prevent falls and health emergencies through continuous assessment of mobility, activity patterns, and vital signs. The system uses AI algorithms to analyze data from wearable sensors and environmental monitors, detecting early signs of risk. Key features include real-time alerts to caregivers, personalized safety recommendations, and comprehensive health reporting. Clinical studies show systems like sense4safety can reduce fall incidents by up to 40% in high-risk populations.";
-                        source = "Health Technology Review";
-                    }
-                    else {
-                        // Generic response for any question
-                        response = `Based on current medical research: ${question} is an important consideration for health and safety. Recent studies emphasize the importance of regular monitoring and personalized interventions. For specific guidance, consult with your healthcare provider who can consider your individual health profile.`;
-                        source = "Medical Research Database";
-                    }
-
-                    // Create response with source
-                    const responseDiv = document.createElement('div');
-                    responseDiv.className = 'chat-message bot-message';
-                    responseDiv.innerHTML = `
-                        <div>${response}</div>
-                        <div class="search-source">Source: ${source}</div>
-                    `;
-                    chatMessages.appendChild(responseDiv);
-
-                    chatMessages.scrollTop = chatMessages.scrollHeight;
-                    isTyping = false;
-                }, 1500); // Simulate web search delay
-            }
         });
     </script>
 </body>
